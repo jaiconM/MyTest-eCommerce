@@ -23,16 +23,16 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet MyTest-eCommerce.sln build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/MyTest-eCommerce/MyTest-eCommerce.API/MyTest-eCommerce.API
+        run: dotnet publish MyTest-eCommerce.sln -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/MyTest-eCommerce/MyTest-eCommerce.API/MyTest-eCommerce.API
+          path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
     runs-on: windows-latest
