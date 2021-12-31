@@ -24,13 +24,13 @@
   <ItemGroup>
     <ProjectReference Include="..\MyTest-eCommerce.API\MyTest-eCommerce.API.csproj" />
     <ProjectReference Include="..\MyTest-eCommerce.Data\MyTest-eCommerce.Data.csproj" />
-    <ProjectReference Include="..\MyTest-eCommerce.Model\MyTest-eCommerce.Model.csproj" />
+    <ProjectReference Include="..\MyTest-eCommerce.Domain\MyTest-eCommerce.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="API\" />
     <Folder Include="Data\" />
-    <Folder Include="Model\" />
+    <Folder Include="Domain\" />
   </ItemGroup>
 
 </Project>
