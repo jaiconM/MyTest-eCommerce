@@ -4,7 +4,7 @@ using MyTest_eCommerce.Model.Interfaces;
 
 namespace MyTest_eCommerce.API.Controllers {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProdutosController : ControllerBase {
 
         private readonly ILogger<ProdutosController> _logger;
@@ -16,12 +16,24 @@ namespace MyTest_eCommerce.API.Controllers {
         }
 
         [HttpGet]
-        public IEnumerable<Produto> ListeTodos() {
+        public async Task<ActionResult<IEnumerable<Produto>>> ListeTodos() {
             try {
-                return _servicoDeCadastroDeProduto.ListeProdutos();
+                var produtos = await _servicoDeCadastroDeProduto.ListeProdutos();
+                return produtos.ToList();
             }
             catch (Exception erro) {
                 _logger.LogError(erro, "ProdutosController.ListeTodos");
+                throw;
+            }
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Produto>> ListeProdutoPorId(int id) {
+            try {
+                return await _servicoDeCadastroDeProduto.ListeProdutoPorId(id);
+            }
+            catch (Exception erro) {
+                _logger.LogError(erro, "ProdutosController.ListeProdutoPorId");
                 throw;
             }
         }

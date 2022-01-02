@@ -2,7 +2,7 @@
 
 namespace MyTest_eCommerce.Model.Interfaces {
     public interface IServicoDeCadastroDeProduto {
-        Produto ListeProdutoPorId(int id);
-        IEnumerable<Produto> ListeProdutos();
+        Task<Produto> ListeProdutoPorId(int id);
+        Task<IEnumerable<Produto>> ListeProdutos();
     }
 }

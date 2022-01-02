@@ -2,7 +2,7 @@
 
 namespace MyTest_eCommerce.Data.Interfaces {
     public interface IProdutoRepositorio {
-        IEnumerable<Produto> ListeTodos();
-        Produto ListePorId(int id);
+        Task<IEnumerable<Produto>> ListeTodos();
+        Task<Produto> ListePorId(int id);
     }
 }

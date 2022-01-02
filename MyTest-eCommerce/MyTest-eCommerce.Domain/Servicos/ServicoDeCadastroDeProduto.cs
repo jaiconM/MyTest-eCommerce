@@ -9,7 +9,7 @@ namespace MyTest_eCommerce.Model.Servicos {
         public ServicoDeCadastroDeProduto(IProdutoRepositorio repositorioDeProduto)
             => _repositorioDeProduto = repositorioDeProduto;
 
-        public IEnumerable<Produto> ListeProdutos() => _repositorioDeProduto.ListeTodos();
-        public Produto ListeProdutoPorId(int id) => _repositorioDeProduto.ListePorId(id);
+        public async Task<IEnumerable<Produto>> ListeProdutos() => await _repositorioDeProduto.ListeTodos();
+        public async Task<Produto> ListeProdutoPorId(int id) => await _repositorioDeProduto.ListePorId(id);
     }
 }
