@@ -1,6 +1,6 @@
-﻿using MyTest_eCommerce.Model.Enums;
+﻿using MyTest_eCommerce.Data.Enums;
 
-namespace MyTest_eCommerce.Model.Entidades {
+namespace MyTest_eCommerce.Data.Entidades {
     public class Produto {
         public int Id { get; set; }
         public string? Codigo { get; set; }

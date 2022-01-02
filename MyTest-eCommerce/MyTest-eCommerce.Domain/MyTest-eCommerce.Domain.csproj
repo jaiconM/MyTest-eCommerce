@@ -11,8 +11,4 @@
     <ProjectReference Include="..\MyTest-eCommerce.Data\MyTest-eCommerce.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Servicos\" />
-  </ItemGroup>
-
 </Project>
