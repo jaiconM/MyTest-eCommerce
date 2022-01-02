@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTest-eCommerce.API", "MyTest-eCommerce.API\MyTest-eCommerce.API.csproj", "{D1C6BC99-5264-40E5-9704-ECBF5179E5A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTest-eCommerce.API", "MyTest-eCommerce.API\MyTest-eCommerce.API.csproj", "{D1C6BC99-5264-40E5-9704-ECBF5179E5A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTest-eCommerce.Data", "MyTest-eCommerce.Data\MyTest-eCommerce.Data.csproj", "{D53506E1-2346-4579-99C3-5F96ED1B1A32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTest-eCommerce.Data", "MyTest-eCommerce.Data\MyTest-eCommerce.Data.csproj", "{D53506E1-2346-4579-99C3-5F96ED1B1A32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTest-eCommerce.Model", "MyTest-eCommerce.Model\MyTest-eCommerce.Model.csproj", "{73FB7D75-7DB6-4872-97E4-F04E4182F598}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTest-eCommerce.Domain", "MyTest-eCommerce.Domain\MyTest-eCommerce.Domain.csproj", "{73FB7D75-7DB6-4872-97E4-F04E4182F598}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTest-eCommerce.Tests", "MyTest-eCommerce.Tests\MyTest-eCommerce.Tests.csproj", "{FF35C8E8-51B5-4A18-A6C0-29E10D0FD5B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTest-eCommerce.Tests", "MyTest-eCommerce.Tests\MyTest-eCommerce.Tests.csproj", "{FF35C8E8-51B5-4A18-A6C0-29E10D0FD5B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

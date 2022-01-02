@@ -1,28 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
+using MyTest_eCommerce.Data.Entidades;
+using MyTest_eCommerce.Model.Interfaces;
 
 namespace MyTest_eCommerce.API.Controllers {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+    public class ProdutosController : ControllerBase {
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<ProdutosController> _logger;
+        private readonly IServicoDeCadastroDeProduto _servicoDeCadastroDeProduto;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger) {
+        public ProdutosController(ILogger<ProdutosController> logger, IServicoDeCadastroDeProduto servicoDeCadastroDeProduto) {
             _logger = logger;
+            _servicoDeCadastroDeProduto = servicoDeCadastroDeProduto;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get() {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+        [HttpGet]
+        public IEnumerable<Produto> ListeTodos() {
+            try {
+                return _servicoDeCadastroDeProduto.ListeProdutos();
+            }
+            catch (Exception erro) {
+                _logger.LogError(erro, "ProdutosController.ListeTodos");
+                throw;
+            }
         }
     }
 }
