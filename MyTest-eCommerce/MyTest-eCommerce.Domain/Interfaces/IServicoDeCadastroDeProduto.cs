@@ -1,8 +1,8 @@
-﻿using MyTest_eCommerce.Data.Entidades;
+﻿using MyTest_eCommerce.Domain.Entidades;
 
-namespace MyTest_eCommerce.Model.Interfaces {
+namespace MyTest_eCommerce.Domain.Interfaces {
     public interface IServicoDeCadastroDeProduto {
-        Produto ListeProdutoPorId(int id);
-        IEnumerable<Produto> ListeProdutos();
+        Task<Produto> ListeProdutoPorId(int id);
+        Task<IEnumerable<Produto>> ListeProdutos();
     }
 }
