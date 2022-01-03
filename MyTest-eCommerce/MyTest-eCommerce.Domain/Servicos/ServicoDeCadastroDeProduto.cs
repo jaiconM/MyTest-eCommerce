@@ -1,8 +1,7 @@
-﻿using MyTest_eCommerce.Data.Entidades;
-using MyTest_eCommerce.Data.Interfaces;
-using MyTest_eCommerce.Model.Interfaces;
+﻿using MyTest_eCommerce.Domain.Entidades;
+using MyTest_eCommerce.Domain.Interfaces;
 
-namespace MyTest_eCommerce.Model.Servicos {
+namespace MyTest_eCommerce.Domain.Servicos {
     public class ServicoDeCadastroDeProduto : IServicoDeCadastroDeProduto {
         private readonly IProdutoRepositorio _repositorioDeProduto;
 

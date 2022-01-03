@@ -1,5 +1,5 @@
-﻿using MyTest_eCommerce.Data.Entidades;
-using MyTest_eCommerce.Data.Interfaces;
+﻿using MyTest_eCommerce.Domain.Interfaces;
+using MyTest_eCommerce.Domain.Entidades;
 
 namespace MyTest_eCommerce.Data.Repositorios {
     public class ProdutoRepositorio : IProdutoRepositorio {

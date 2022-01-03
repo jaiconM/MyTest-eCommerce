@@ -1,6 +1,6 @@
-﻿using MyTest_eCommerce.Data.Enums;
+﻿using MyTest_eCommerce.Domain.Enums;
 
-namespace MyTest_eCommerce.Data.Entidades {
+namespace MyTest_eCommerce.Domain.Entidades {
     public class Produto {
         public int Id { get; set; }
         public string? Codigo { get; set; }

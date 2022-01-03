@@ -1,7 +1,6 @@
-using MyTest_eCommerce.Data.Interfaces;
 using MyTest_eCommerce.Data.Repositorios;
-using MyTest_eCommerce.Model.Interfaces;
-using MyTest_eCommerce.Model.Servicos;
+using MyTest_eCommerce.Domain.Interfaces;
+using MyTest_eCommerce.Domain.Servicos;
 
 var builder = WebApplication.CreateBuilder(args);
 

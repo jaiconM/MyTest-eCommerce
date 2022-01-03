@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using MyTest_eCommerce.Data.Entidades;
-using MyTest_eCommerce.Model.Interfaces;
+using MyTest_eCommerce.Domain.Entidades;
+using MyTest_eCommerce.Domain.Interfaces;
 
 namespace MyTest_eCommerce.API.Controllers {
     [ApiController]
