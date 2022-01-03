@@ -4,7 +4,7 @@ using MyTest_eCommerce.Model.Interfaces;
 
 namespace MyTest_eCommerce.API.Controllers {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ProdutosController : ControllerBase {
 
         private readonly ILogger<ProdutosController> _logger;
