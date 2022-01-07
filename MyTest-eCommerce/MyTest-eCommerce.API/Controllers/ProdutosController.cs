@@ -30,7 +30,8 @@ namespace MyTest_eCommerce.API.Controllers {
         [HttpGet("{id}")]
         public async Task<ActionResult<Produto>> ListeProdutoPorId(int id) {
             try {
-                return await _servicoDeCadastroDeProduto.ListeProdutoPorId(id);
+                return new Produto { Id = id, Nome = "Teste de produto"};
+                //return await _servicoDeCadastroDeProduto.ListeProdutoPorId(id);
             }
             catch (Exception erro) {
                 _logger.LogError(erro, "ProdutosController.ListeProdutoPorId");
